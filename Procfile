@@ -1,1 +1,0 @@
-web: gunicorn config.wsgi --log-file -git push heroku main
