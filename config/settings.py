@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,13 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'viktorbezai@gmail.com'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandboxa93e4c5096da4862a93445474c7b66d7.mailgun.org'
+EMAIL_HOST_PASSWORD = '407f7d27ae375e182589fd22f0b0b322-162d1f80-8d2cd1e7'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
